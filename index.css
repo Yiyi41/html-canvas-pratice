@@ -1,0 +1,93 @@
+body {
+  font-family: "Jost", sans-serif;
+  background-color: whitesmoke;
+}
+
+#tri-color,
+#profil,
+.hidden {
+  display: none;
+}
+
+.display {
+  display: inline;
+}
+
+.app {
+  max-width: 1224px;
+  width: 92%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.input-div {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px dotted black;
+  background-color: white;
+  position: relative;
+}
+
+.input-div .browse {
+  color: black;
+  font-weight: bold;
+}
+
+.file {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.show-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+#download-btn {
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  left: 480px;
+  top: -10px;
+}
+
+#delete {
+  cursor: pointer;
+  font-size: 30px;
+  height: 30px;
+  /* color: black; */
+  position: absolute;
+  left: 423px;
+  top: -10px;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.profilImg {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+}
