@@ -1,6 +1,6 @@
 body {
   font-family: "Jost", sans-serif;
-  background-color: whitesmoke;
+  background-color: black;
 }
 
 #tri-color,
@@ -23,7 +23,8 @@ body {
 }
 
 .input-div {
-  width: 100%;
+  margin: 150px auto;
+  width: 60%;
   height: 300px;
   border-radius: 5px;
   display: flex;

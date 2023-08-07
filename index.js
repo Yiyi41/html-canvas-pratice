@@ -46,9 +46,35 @@ function createImgTag(uploadFile) {
 }
 
 function transformPhoto(imgProfil) {
+  var lastend = 0;
+  var data = [1, 1, 1]; // If you add more data values make sure you add more colors
+  var myTotal = 0; // Automatically calculated so don't touch
+  var myColor = ["#0051ff", "#fac500", "#ff0000"]; // Colors of each slice
+
+  for (var e = 0; e < data.length; e++) {
+    myTotal += data[e];
+  }
+
+  for (var i = 0; i < data.length; i++) {
+    context.fillStyle = myColor[i];
+    context.beginPath();
+    context.moveTo(myCanvas.width / 2, myCanvas.height / 2);
+    context.arc(
+      myCanvas.width / 2, // x
+      myCanvas.height / 2, // y
+      myCanvas.height / 2, // radius
+      lastend, // startingAngle (radians)
+      lastend + Math.PI * 2 * (data[i] / myTotal), // endingAngle (radians)
+      false // antiClockwise (boolean)
+    );
+    context.lineTo(myCanvas.width / 2, myCanvas.height / 2);
+    context.fill();
+    lastend += Math.PI * 2 * (data[i] / myTotal);
+  }
+
   const sWidth = imgProfil.width;
   const sHeight = imgProfil.height;
-  context.drawImage(imgBackground, 0, 0);
+  // context.drawImage(imgBackground, 0, 0, 394, 394);
 
   context.beginPath();
   context.arc(
