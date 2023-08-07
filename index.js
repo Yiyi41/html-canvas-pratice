@@ -132,3 +132,4 @@ function deleteImage() {
   showDiv.innerHTML = "";
   location.reload();
 }
+
