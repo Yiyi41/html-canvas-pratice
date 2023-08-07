@@ -7,7 +7,7 @@ const imgBackground = document.getElementById("tri-color");
 const deleteBtn = document.getElementById("delete");
 const downloadBtn = document.getElementById("download-btn");
 
-//RECUPERER PHOTO DE L'UTILISATEUR
+//GET USER PHOTO FROM INPUT WITH BTN CLICK TO CHOSE FILE
 input.addEventListener("change", () => {
   const file = input.files[0];
   const imgProfil = createImgTag(file);
@@ -19,6 +19,7 @@ input.addEventListener("change", () => {
   downloadBtn.classList.toggle("display");
 });
 
+//GET USER PHOTO WITH DRAG & DROP IN INPUT
 inputDiv.addEventListener("drop", (e) => {
   e.preventDefault();
   const file = e.dataTransfer.files[0];
@@ -37,6 +38,7 @@ downloadBtn.addEventListener("click", (e) => {
   downloadImage(dataURL, "my-wa-profil.jpeg");
 });
 
+// CREATE AN IMAGE TAG OF UPLOAD PHOTO
 function createImgTag(uploadFile) {
   const imgProfil = document.createElement("img");
   imgProfil.src = URL.createObjectURL(uploadFile);
@@ -45,6 +47,7 @@ function createImgTag(uploadFile) {
   return imgProfil;
 }
 
+// FUNC OF USING CANVAS TO DRAW THE CIRCLE AND MERGE USER PHOTO INTO THE CIRCLE
 function transformPhoto(imgProfil) {
   var lastend = 0;
   var data = [1, 1, 1]; // If you add more data values make sure you add more colors
@@ -74,7 +77,6 @@ function transformPhoto(imgProfil) {
 
   const sWidth = imgProfil.width;
   const sHeight = imgProfil.height;
-  // context.drawImage(imgBackground, 0, 0, 394, 394);
 
   context.beginPath();
   context.arc(
@@ -115,7 +117,8 @@ function transformPhoto(imgProfil) {
   }
 }
 
-function downloadImage(data, filename = "untitled.jpeg") {
+//FUNC FOR DOWNLOAD THE TRANFORMED PROFIL
+function downloadImage(data, filename = "myProfil.jpeg") {
   const a = document.createElement("a");
   a.href = data;
   console.log(a);
@@ -124,6 +127,7 @@ function downloadImage(data, filename = "untitled.jpeg") {
   a.click();
 }
 
+// FUNC FOR DELET THE PHOTO TRANFORMED
 function deleteImage() {
   showDiv.innerHTML = "";
   location.reload();
