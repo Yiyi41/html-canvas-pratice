@@ -4,6 +4,6 @@
 Click [here](https://web-atrio.com/SSII/a-propos/ressources-graphiques) to see the similar feature that I build in a production projet.
 
 
-<p>
-  
-</p>
+<p align="center" >
+<img align="center" width="900" src="https://res.cloudinary.com/dps4zteie/image/upload/v1691502942/Capture_d_e%CC%81cran_2023-08-08_a%CC%80_15.54.32_gmupij.png"/>
+</p> 
