@@ -16,13 +16,13 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 
 .input-div {
-  margin: 50px auto;
-  width: 60%;
-  height: 300px;
+  margin: 20px auto;
+  width: 50%;
+  height: 200px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
