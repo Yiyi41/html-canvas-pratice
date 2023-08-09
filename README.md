@@ -4,5 +4,5 @@ This is a study case projet for html canvas, before integrate a similar feature 
 *<h5 align="right">Stacks ▶︎▶︎ Vanilla js</h5>*
 
 <p align="center" >
-<img align="center" width="900" src="https://res.cloudinary.com/dps4zteie/image/upload/v1691502942/Capture_d_e%CC%81cran_2023-08-08_a%CC%80_15.54.32_gmupij.png"/>
+<img align="center" width="900" src="https://res.cloudinary.com/dps4zteie/image/upload/v1691594110/Capture_d_e%CC%81cran_2023-08-09_a%CC%80_17.12.11_znwlid.png"/>
 </p> 
